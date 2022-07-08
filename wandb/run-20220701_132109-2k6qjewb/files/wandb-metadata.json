@@ -1,0 +1,20 @@
+{
+    "os": "Windows-10-10.0.19041-SP0",
+    "python": "3.8.5",
+    "heartbeatAt": "2022-07-01T11:21:16.063339",
+    "startedAt": "2022-07-01T11:21:09.073328",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 2080 SUPER",
+    "gpu_count": 1,
+    "cpu_count": 16,
+    "cuda": null,
+    "args": [
+        "configs/config.json"
+    ],
+    "state": "running",
+    "program": "main.py",
+    "codePath": "main.py",
+    "host": "20-003894",
+    "username": "lucasdevries",
+    "executable": "c:\\users\\lucasdevries\\anaconda3\\envs\\py38\\python.exe"
+}

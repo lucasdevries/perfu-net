@@ -1,0 +1,154 @@
+wandb_version: 1
+
+AUGMENTATION:
+  desc: null
+  value: ''
+CROSSVALIDATION:
+  desc: null
+  value: ''
+GENERAL:
+  desc: null
+  value: ''
+MODELSETTINGS:
+  desc: null
+  value: ''
+OPTIMIZER:
+  desc: null
+  value: ''
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.12.6
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.8.5
+    start_time: 1656688740
+    t:
+      1:
+      - 1
+      - 5
+      3:
+      - 16
+      4: 3.8.5
+      5: 0.12.6
+      8:
+      - 3
+      - 5
+agent:
+  desc: null
+  value: Agent
+att_kernel:
+  desc: null
+  value: 1
+augmentations:
+  desc: null
+  value: true
+batch_size_train:
+  desc: null
+  value: 2
+batch_size_val:
+  desc: null
+  value: 1
+channel_attention:
+  desc: null
+  value: true
+checkpoint_file:
+  desc: null
+  value: checkpoint.pth.tar
+clip_length:
+  desc: null
+  value: 16
+criterion:
+  desc: null
+  value: gDice
+cuda:
+  desc: null
+  value: true
+data_folder:
+  desc: null
+  value: ./data/train/
+data_mode:
+  desc: null
+  value: cv
+dropout:
+  desc: null
+  value: false
+dropout_prob:
+  desc: null
+  value: 0.2
+file_extension:
+  desc: null
+  value: .npy
+fold:
+  desc: null
+  value: fold_a
+gamma:
+  desc: null
+  value: 0.5
+gpu_device:
+  desc: null
+  value: 0
+hflip_prob:
+  desc: null
+  value: 0.125
+img_size:
+  desc: null
+  value: 256
+input_channels:
+  desc: null
+  value: 2
+learning_rate:
+  desc: null
+  value: 0.001
+loss_alpha:
+  desc: null
+  value: 1
+loss_schedule:
+  desc: null
+  value: false
+lr_decay_epoch:
+  desc: null
+  value: 30
+lr_type:
+  desc: null
+  value: decay
+max_epoch:
+  desc: null
+  value: 100
+mode:
+  desc: null
+  value: train
+modelname:
+  desc: null
+  value: PerfUNet
+momentum:
+  desc: null
+  value: 0.9
+nonlinear_downsampling:
+  desc: null
+  value: false
+num_classes:
+  desc: null
+  value: 2
+optimizer:
+  desc: null
+  value: Adam
+reduce:
+  desc: null
+  value: AttentionModule
+rotation_prob:
+  desc: null
+  value: 0.5
+seed:
+  desc: null
+  value: 1
+temporal_attention:
+  desc: null
+  value: true
+wandb_folder:
+  desc: null
+  value: ./wandb/
+weight_decay:
+  desc: null
+  value: see agent

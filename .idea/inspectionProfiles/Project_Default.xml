@@ -1,0 +1,38 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="DuplicatedCode" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <Languages>
+        <language minSize="100" name="Python" />
+      </Languages>
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="12">
+            <item index="0" class="java.lang.String" itemvalue="autopep8" />
+            <item index="1" class="java.lang.String" itemvalue="jupytext" />
+            <item index="2" class="java.lang.String" itemvalue="autoflake" />
+            <item index="3" class="java.lang.String" itemvalue="tensorboard" />
+            <item index="4" class="java.lang.String" itemvalue="papermill" />
+            <item index="5" class="java.lang.String" itemvalue="flake8" />
+            <item index="6" class="java.lang.String" itemvalue="gst-plugins-base" />
+            <item index="7" class="java.lang.String" itemvalue="expat" />
+            <item index="8" class="java.lang.String" itemvalue="keras-applications" />
+            <item index="9" class="java.lang.String" itemvalue="gstreamer" />
+            <item index="10" class="java.lang.String" itemvalue="keras-preprocessing" />
+            <item index="11" class="java.lang.String" itemvalue="glib" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="list.__and__" />
+          <option value="scipy.interpolate.interpolate.interp1d.__sub__" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

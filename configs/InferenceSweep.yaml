@@ -1,0 +1,63 @@
+program: main.py
+method: grid
+parameters:
+  gpu_device:
+    values:
+      - 0
+  seed:
+    values:
+      - 1
+  agent:
+    values:
+      - 'AgentTestSet'
+  modelname:
+    values:
+      - 'PerfUNet'
+  reduce:
+    values:
+      - 'AttentionModule'
+  temporal_attention:
+    values:
+      - true
+  channel_attention:
+    values:
+      - true
+  model_path:
+    values:
+      - "kiuu8gtj"
+      - "84dab8mg"
+      - "7y8rvre6"
+      - "mxt1s3zg"
+      - "8r7oqm8b"
+      - "c8nqhum3"
+      - "oln5g0y9"
+      - "if3p0bcd"
+      - "0535y9bw"
+      - "lie765j8"
+      - "9w5ubhxr"
+      - "9c3zeyg3"
+      - "4hudo3is"
+      - "81d8seok"
+      - "ky7cp9vn"
+      - "jmitis3f"
+      - "n2u6pkyl"
+      - "0qu12swp"
+      - "0sqyuiw7"
+      - "6zh58hyx"
+  att_kernel:
+    values:
+      - 1
+  data_folder:
+    values:
+      - './data/test/'
+  data_mode:
+    values:
+      - 'test'
+  mode:
+    values:
+      - 'test'
+command:
+  - ${env}
+  - python
+  - ${program}
+  - configs/config.json

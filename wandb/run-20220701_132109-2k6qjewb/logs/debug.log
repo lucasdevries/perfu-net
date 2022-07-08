@@ -1,0 +1,143 @@
+2022-07-01 13:21:09,079 INFO    MainThread:17240 [wandb_setup.py:_flush():71] setting env: {'entity': 'lucasdevries', 'project': 'uncategorized', 'sweep_id': 'g7gsdlc1', 'root_dir': 'C:\\Users\\lucasdevries\\surfdrive\\Projects\\perfu-net-public', 'run_id': '2k6qjewb', 'sweep_param_path': 'C:\\Users\\lucasdevries\\surfdrive\\Projects\\perfu-net-public\\wandb\\sweep-g7gsdlc1\\config-2k6qjewb.yaml', 'mode': 'online'}
+2022-07-01 13:21:09,079 INFO    MainThread:17240 [wandb_setup.py:_flush():71] setting login settings: {}
+2022-07-01 13:21:09,080 INFO    MainThread:17240 [wandb_init.py:_log_setup():357] Logging user logs to C:\Users\lucasdevries\surfdrive\Projects\perfu-net-public\wandb\run-20220701_132109-2k6qjewb\logs\debug.log
+2022-07-01 13:21:09,080 INFO    MainThread:17240 [wandb_init.py:_log_setup():358] Logging internal logs to C:\Users\lucasdevries\surfdrive\Projects\perfu-net-public\wandb\run-20220701_132109-2k6qjewb\logs\debug-internal.log
+2022-07-01 13:21:09,080 INFO    MainThread:17240 [wandb_init.py:init():390] calling init triggers
+2022-07-01 13:21:09,080 INFO    MainThread:17240 [wandb_init.py:init():395] wandb.init called with sweep_config: {'agent': 'AgentTestSet', 'att_kernel': 1, 'channel_attention': True, 'data_folder': './data/test/', 'extension': 'nii', 'gpu_device': 0, 'model_path': '0qu12swp', 'modelname': 'PerfUNet', 'reduce': 'AttentionModule', 'seed': 1, 'temporal_attention': True}
+config: {'GENERAL': '', 'agent': 'Agent', 'checkpoint_file': 'checkpoint.pth.tar', 'cuda': True, 'gpu_device': 0, 'seed': 1, 'wandb_folder': './wandb/', 'MODELSETTINGS': '', 'modelname': 'PerfUNet', 'reduce': 'AttentionModule', 'channel_attention': True, 'temporal_attention': True, 'mode': 'train', 'dropout': False, 'dropout_prob': 0.2, 'img_size': 256, 'clip_length': 16, 'input_channels': 2, 'num_classes': 2, 'att_kernel': 1, 'nonlinear_downsampling': False, 'OPTIMIZER': '', 'criterion': 'gDice', 'loss_alpha': 1, 'loss_schedule': False, 'optimizer': 'Adam', 'learning_rate': 0.001, 'lr_type': 'decay', 'gamma': 0.5, 'lr_decay_epoch': 30, 'weight_decay': 'see agent', 'momentum': 0.9, 'batch_size_train': 2, 'batch_size_val': 1, 'max_epoch': 100, 'AUGMENTATION': '', 'augmentations': True, 'rotation_prob': 0.5, 'hflip_prob': 0.125, 'CROSSVALIDATION': '', 'fold': 'fold_a', 'data_mode': 'cv', 'data_folder': './data/train/', 'file_extension': '.npy'}
+2022-07-01 13:21:09,080 INFO    MainThread:17240 [wandb_init.py:init():435] starting backend
+2022-07-01 13:21:09,080 INFO    MainThread:17240 [backend.py:_multiprocessing_setup():95] multiprocessing start_methods=spawn, using: spawn
+2022-07-01 13:21:09,085 INFO    MainThread:17240 [backend.py:ensure_launched():199] starting backend process...
+2022-07-01 13:21:09,210 INFO    MainThread:17240 [backend.py:ensure_launched():204] started backend process with pid: 18616
+2022-07-01 13:21:09,210 INFO    MainThread:17240 [wandb_init.py:init():444] backend started and connected
+2022-07-01 13:21:09,211 INFO    MainThread:17240 [wandb_run.py:_config_callback():911] config_cb None None {'agent': 'AgentTestSet', 'att_kernel': 1, 'channel_attention': True, 'data_folder': './data/test/', 'extension': 'nii', 'gpu_device': 0, 'model_path': '0qu12swp', 'modelname': 'PerfUNet', 'reduce': 'AttentionModule', 'seed': 1, 'temporal_attention': True}
+2022-07-01 13:21:09,212 INFO    MainThread:17240 [wandb_init.py:init():503] updated telemetry
+2022-07-01 13:21:09,220 INFO    MainThread:17240 [wandb_init.py:init():533] communicating current version
+2022-07-01 13:21:11,190 INFO    MainThread:17240 [wandb_init.py:init():538] got version response upgrade_message: "wandb version 0.12.20 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2022-07-01 13:21:11,191 INFO    MainThread:17240 [wandb_init.py:init():548] communicating run to backend with 30 second timeout
+2022-07-01 13:21:11,463 INFO    MainThread:17240 [wandb_init.py:init():576] starting run threads in backend
+2022-07-01 13:21:16,483 INFO    MainThread:17240 [wandb_run.py:_console_start():1693] atexit reg
+2022-07-01 13:21:16,484 INFO    MainThread:17240 [wandb_run.py:_redirect():1567] redirect: SettingsConsole.WRAP
+2022-07-01 13:21:16,485 INFO    MainThread:17240 [wandb_run.py:_redirect():1604] Wrapping output streams.
+2022-07-01 13:21:16,486 INFO    MainThread:17240 [wandb_run.py:_redirect():1628] Redirects installed.
+2022-07-01 13:21:16,486 INFO    MainThread:17240 [wandb_init.py:init():603] run started, returning control to user process
+2022-07-01 13:21:16,489 INFO    MainThread:17240 [wandb_config.py:__setitem__():144] config set run_name = devout-sweep-1 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x000002112291BCA0>>
+2022-07-01 13:21:16,489 INFO    MainThread:17240 [wandb_run.py:_config_callback():911] config_cb run_name devout-sweep-1 None
+2022-07-01 13:21:16,489 INFO    MainThread:17240 [wandb_config.py:__setitem__():144] config set run_id = 2k6qjewb - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x000002112291BCA0>>
+2022-07-01 13:21:16,489 INFO    MainThread:17240 [wandb_run.py:_config_callback():911] config_cb run_id 2k6qjewb None
+2022-07-01 13:21:16,490 INFO    MainThread:17240 [wandb_config.py:__setitem__():144] config set checkpoint_dir = C:\Users\lucasdevries\surfdrive\Projects\perfu-net-public\wandb\run-20220701_132109-2k6qjewb\files\experiments\checkpoints/ - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x000002112291BCA0>>
+2022-07-01 13:21:16,490 INFO    MainThread:17240 [wandb_run.py:_config_callback():911] config_cb checkpoint_dir C:\Users\lucasdevries\surfdrive\Projects\perfu-net-public\wandb\run-20220701_132109-2k6qjewb\files\experiments\checkpoints/ None
+2022-07-01 13:21:16,491 INFO    MainThread:17240 [wandb_config.py:__setitem__():144] config set json_dir = C:\Users\lucasdevries\surfdrive\Projects\perfu-net-public\wandb\run-20220701_132109-2k6qjewb\files\experiments\config/ - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x000002112291BCA0>>
+2022-07-01 13:21:16,491 INFO    MainThread:17240 [wandb_run.py:_config_callback():911] config_cb json_dir C:\Users\lucasdevries\surfdrive\Projects\perfu-net-public\wandb\run-20220701_132109-2k6qjewb\files\experiments\config/ None
+2022-07-01 13:21:20,584 INFO    MainThread:17240 [wandb_run.py:_atexit_cleanup():1663] got exitcode: 1
+2022-07-01 13:21:20,584 INFO    MainThread:17240 [wandb_run.py:_restore():1635] restore
+2022-07-01 13:21:21,692 INFO    MainThread:17240 [wandb_run.py:_wait_for_finish():1793] got exit ret: file_counts {
+}
+pusher_stats {
+}
+
+2022-07-01 13:21:21,978 INFO    MainThread:17240 [wandb_run.py:_wait_for_finish():1793] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 569
+  total_bytes: 569
+}
+
+2022-07-01 13:21:22,591 INFO    MainThread:17240 [wandb_run.py:_wait_for_finish():1793] got exit ret: file_counts {
+  wandb_count: 5
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 569
+  total_bytes: 18661
+}
+
+2022-07-01 13:21:22,701 INFO    MainThread:17240 [wandb_run.py:_wait_for_finish():1793] got exit ret: file_counts {
+  wandb_count: 5
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 569
+  total_bytes: 18661
+}
+
+2022-07-01 13:21:22,811 INFO    MainThread:17240 [wandb_run.py:_wait_for_finish():1793] got exit ret: file_counts {
+  wandb_count: 5
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 18661
+  total_bytes: 18661
+}
+
+2022-07-01 13:21:22,923 INFO    MainThread:17240 [wandb_run.py:_wait_for_finish():1793] got exit ret: file_counts {
+  wandb_count: 5
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 18661
+  total_bytes: 18661
+}
+
+2022-07-01 13:21:23,035 INFO    MainThread:17240 [wandb_run.py:_wait_for_finish():1793] got exit ret: file_counts {
+  wandb_count: 5
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 18661
+  total_bytes: 18661
+}
+
+2022-07-01 13:21:23,147 INFO    MainThread:17240 [wandb_run.py:_wait_for_finish():1793] got exit ret: file_counts {
+  wandb_count: 5
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 18661
+  total_bytes: 18661
+}
+
+2022-07-01 13:21:23,257 INFO    MainThread:17240 [wandb_run.py:_wait_for_finish():1793] got exit ret: file_counts {
+  wandb_count: 5
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 18661
+  total_bytes: 18661
+}
+
+2022-07-01 13:21:23,369 INFO    MainThread:17240 [wandb_run.py:_wait_for_finish():1793] got exit ret: file_counts {
+  wandb_count: 5
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 18661
+  total_bytes: 18661
+}
+
+2022-07-01 13:21:23,697 INFO    MainThread:17240 [wandb_run.py:_wait_for_finish():1793] got exit ret: file_counts {
+  wandb_count: 5
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 18661
+  total_bytes: 18661
+}
+
+2022-07-01 13:21:24,155 INFO    MainThread:17240 [wandb_run.py:_wait_for_finish():1793] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 5
+  other_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 18661
+  total_bytes: 18661
+}
+local_info {
+}
+
+2022-07-01 13:21:25,660 INFO    MainThread:17240 [wandb_run.py:_append_files():2061] logging synced files

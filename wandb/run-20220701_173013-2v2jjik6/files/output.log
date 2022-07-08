@@ -1,0 +1,162 @@
+*** Setting seed to 1, deterministic behaviour on...
+{'GENERAL': '', 'agent': 'Agent', 'checkpoint_file': 'checkpoint.pth.tar', 'cuda': True, 'gpu_device': 0, 'seed': 1, 'wandb_folder': './wandb/', 'MODELSETTINGS': '', 'modelname': 'PerfUNet', 'reduce': 'AttentionModule', 'channel_attention': True, 'temporal_attention': True, 'mode': 'train', 'dropout': False, 'dropout_prob': 0.2, 'img_size': 256, 'clip_length': 16, 'input_channels': 2, 'num_classes': 2, 'att_kernel': 1, 'nonlinear_downsampling': False, 'OPTIMIZER': '', 'criterion': 'gDice', 'loss_alpha': 1, 'loss_schedule': False, 'optimizer': 'Adam', 'learning_rate': 0.001, 'lr_type': 'decay', 'gamma': 0.5, 'lr_decay_epoch': 30, 'weight_decay': 'see agent', 'momentum': 0.9, 'batch_size_train': 2, 'batch_size_val': 1, 'max_epoch': 100, 'AUGMENTATION': '', 'augmentations': True, 'rotation_prob': 0.5, 'hflip_prob': 0.125, 'CROSSVALIDATION': '', 'fold': 'fold_a', 'data_mode': 'cv', 'data_folder': './data/train/', 'file_extension': '.npy', 'run_name': 'lyric-silence-12', 'run_id': '2v2jjik6', 'checkpoint_dir': 'C:\\Users\\lucasdevries\\surfdrive\\Projects\\perfu-net-public\\wandb\\run-20220701_173013-2v2jjik6\\files\\experiments\\checkpoints/', 'json_dir': 'C:\\Users\\lucasdevries\\surfdrive\\Projects\\perfu-net-public\\wandb\\run-20220701_173013-2v2jjik6\\files\\experiments\\config/'}
+Available devices  1
+Current cuda device  0
+cuda:0
+INFO:13964:Operation will be on *****GPU-CUDA0*****
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv3d-1     [-1, 32, 16, 256, 256]           1,760
+       BatchNorm3d-2     [-1, 32, 16, 256, 256]              64
+              ReLU-3     [-1, 32, 16, 256, 256]               0
+            Conv3d-4     [-1, 32, 16, 256, 256]          27,680
+       BatchNorm3d-5     [-1, 32, 16, 256, 256]              64
+ AdaptiveAvgPool3d-6          [-1, 32, 1, 1, 1]               0
+            Conv3d-7           [-1, 2, 1, 1, 1]              64
+              ReLU-8           [-1, 2, 1, 1, 1]               0
+            Conv3d-9          [-1, 32, 1, 1, 1]              64
+AdaptiveMaxPool3d-10          [-1, 32, 1, 1, 1]               0
+           Conv3d-11           [-1, 2, 1, 1, 1]              64
+             ReLU-12           [-1, 2, 1, 1, 1]               0
+           Conv3d-13          [-1, 32, 1, 1, 1]              64
+          Sigmoid-14          [-1, 32, 1, 1, 1]               0
+ ChannelAttention-15          [-1, 32, 1, 1, 1]               0
+           Conv3d-16      [-1, 1, 16, 256, 256]              18
+          Sigmoid-17      [-1, 1, 16, 256, 256]               0
+ SpatialAttention-18      [-1, 1, 16, 256, 256]               0
+       MeanModule-19         [-1, 32, 256, 256]               0
+             ReLU-20         [-1, 32, 256, 256]               0
+  AttentionModule-21         [-1, 32, 256, 256]               0
+             ReLU-22     [-1, 32, 16, 256, 256]               0
+           Conv3d-23      [-1, 32, 8, 128, 128]             896
+DownSampleConvBlock-24      [-1, 32, 8, 128, 128]               0
+           Conv3d-25      [-1, 64, 8, 128, 128]          55,360
+      BatchNorm3d-26      [-1, 64, 8, 128, 128]             128
+             ReLU-27      [-1, 64, 8, 128, 128]               0
+           Conv3d-28      [-1, 64, 8, 128, 128]         110,656
+      BatchNorm3d-29      [-1, 64, 8, 128, 128]             128
+AdaptiveAvgPool3d-30          [-1, 64, 1, 1, 1]               0
+           Conv3d-31           [-1, 4, 1, 1, 1]             256
+             ReLU-32           [-1, 4, 1, 1, 1]               0
+           Conv3d-33          [-1, 64, 1, 1, 1]             256
+AdaptiveMaxPool3d-34          [-1, 64, 1, 1, 1]               0
+           Conv3d-35           [-1, 4, 1, 1, 1]             256
+             ReLU-36           [-1, 4, 1, 1, 1]               0
+           Conv3d-37          [-1, 64, 1, 1, 1]             256
+          Sigmoid-38          [-1, 64, 1, 1, 1]               0
+ ChannelAttention-39          [-1, 64, 1, 1, 1]               0
+           Conv3d-40       [-1, 1, 8, 128, 128]              10
+          Sigmoid-41       [-1, 1, 8, 128, 128]               0
+ SpatialAttention-42       [-1, 1, 8, 128, 128]               0
+       MeanModule-43         [-1, 64, 128, 128]               0
+             ReLU-44         [-1, 64, 128, 128]               0
+  AttentionModule-45         [-1, 64, 128, 128]               0
+             ReLU-46      [-1, 64, 8, 128, 128]               0
+           Conv3d-47        [-1, 64, 4, 64, 64]           1,792
+DownSampleConvBlock-48        [-1, 64, 4, 64, 64]               0
+           Conv3d-49       [-1, 128, 4, 64, 64]         221,312
+      BatchNorm3d-50       [-1, 128, 4, 64, 64]             256
+             ReLU-51       [-1, 128, 4, 64, 64]               0
+           Conv3d-52       [-1, 128, 4, 64, 64]         442,496
+      BatchNorm3d-53       [-1, 128, 4, 64, 64]             256
+AdaptiveAvgPool3d-54         [-1, 128, 1, 1, 1]               0
+           Conv3d-55           [-1, 8, 1, 1, 1]           1,024
+             ReLU-56           [-1, 8, 1, 1, 1]               0
+           Conv3d-57         [-1, 128, 1, 1, 1]           1,024
+AdaptiveMaxPool3d-58         [-1, 128, 1, 1, 1]               0
+           Conv3d-59           [-1, 8, 1, 1, 1]           1,024
+             ReLU-60           [-1, 8, 1, 1, 1]               0
+           Conv3d-61         [-1, 128, 1, 1, 1]           1,024
+          Sigmoid-62         [-1, 128, 1, 1, 1]               0
+ ChannelAttention-63         [-1, 128, 1, 1, 1]               0
+           Conv3d-64         [-1, 1, 4, 64, 64]               6
+          Sigmoid-65         [-1, 1, 4, 64, 64]               0
+ SpatialAttention-66         [-1, 1, 4, 64, 64]               0
+       MeanModule-67          [-1, 128, 64, 64]               0
+             ReLU-68          [-1, 128, 64, 64]               0
+  AttentionModule-69          [-1, 128, 64, 64]               0
+           Conv2d-70          [-1, 128, 64, 64]         147,584
+      BatchNorm2d-71          [-1, 128, 64, 64]             256
+             ReLU-72          [-1, 128, 64, 64]               0
+           Conv2d-73          [-1, 128, 64, 64]         147,584
+      BatchNorm2d-74          [-1, 128, 64, 64]             256
+             ReLU-75          [-1, 128, 64, 64]               0
+  ConvTranspose2d-76        [-1, 128, 128, 128]         147,584
+UpSampleConvBlock-77        [-1, 128, 128, 128]               0
+           Conv2d-78         [-1, 64, 128, 128]         110,656
+      BatchNorm2d-79         [-1, 64, 128, 128]             128
+             ReLU-80         [-1, 64, 128, 128]               0
+           Conv2d-81         [-1, 64, 128, 128]          36,928
+      BatchNorm2d-82         [-1, 64, 128, 128]             128
+             ReLU-83         [-1, 64, 128, 128]               0
+  ConvTranspose2d-84         [-1, 64, 256, 256]          36,928
+UpSampleConvBlock-85         [-1, 64, 256, 256]               0
+           Conv2d-86         [-1, 32, 256, 256]          27,680
+      BatchNorm2d-87         [-1, 32, 256, 256]              64
+             ReLU-88         [-1, 32, 256, 256]               0
+           Conv2d-89         [-1, 32, 256, 256]           9,248
+      BatchNorm2d-90         [-1, 32, 256, 256]              64
+             ReLU-91         [-1, 32, 256, 256]               0
+           Conv2d-92          [-1, 2, 256, 256]              66
+================================================================
+Total params: 1,533,412
+Trainable params: 1,533,412
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 8.00
+Forward/backward pass size (MB): 2456.39
+Params size (MB): 5.85
+Estimated Total Size (MB): 2470.24
+----------------------------------------------------------------
+None
+INFO:DataLoader:Loading DATA using cross-validation
+INFO:DataLoader:Validate on fold fold_a
+INFO:13964:Initial learning rate is 0.001
+Epoch number -0-:   0%|                                                                                                                                                                                        | 0/103 [00:00<?, ?it/s]
+Using augmentations...
+206 100
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch number -0-: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 103/103 [01:02<00:00,  1.65it/s]
+INFO:13964:Training at epoch-0 | loss: -0.1188899912187775  |  dice: 0.20458418556777846
+
+
+
+
+
+
+
+
+Validation at -0-: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:17<00:00,  5.63it/s]
+INFO:13964:Validation at epoch-0 | dice:  0.29076176699200584
+INFO:13964:############# New best #############
+

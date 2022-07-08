@@ -1,0 +1,45 @@
+program: main.py
+method: grid
+parameters:
+  gpu_device:
+    values:
+      - 0
+  seed:
+    values:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+  channel_attention:
+    values:
+      - true
+  temporal_attention:
+    values:
+      - true
+  agent:
+    values:
+      - 'Agent'
+  modelname:
+    values:
+      - 'PerfUNet'
+  reduce:
+    values:
+      - 'AttentionModule'
+  input_channels:
+    values:
+      - 2
+  att_kernel:
+    values:
+      - 1
+  fold:
+    values:
+      - 'fold_a'
+      - 'fold_b'
+      - 'fold_c'
+      - 'fold_d'
+command:
+  - ${env}
+  - python
+  - ${program}
+  - configs/config.json
